@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
+    modelDirectory="/nodered/src-gen" creationIcons="false" editDirectory="/nodered.edit/src-gen"
+    editorDirectory="/nodered.editor/src-gen" modelPluginID="nodered" modelName="Nodered"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" codeFormatting="true"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>nodered.ecore</foreignModel>
+  <testsDirectory xsi:nil="true"/>
+  <genPackages prefix="Nodered" disposableProviderFactory="true" ecorePackage="nodered.ecore#/">
+    <genClasses ecoreClass="nodered.ecore#//Subflow">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference nodered.ecore#//Subflow/subflow"/>
+      <genOperations ecoreOperation="nodered.ecore#//Subflow/createNodeInSubflow"/>
+      <genOperations ecoreOperation="nodered.ecore#//Subflow/remapSubflowNodes"/>
+      <genOperations ecoreOperation="nodered.ecore#//Subflow/createSubflow"/>
+    </genClasses>
+    <genClasses ecoreClass="nodered.ecore#//Flow">
+      <genOperations ecoreOperation="nodered.ecore#//Flow/stopNode"/>
+      <genOperations ecoreOperation="nodered.ecore#//Flow/handleOnSend"/>
+      <genOperations ecoreOperation="nodered.ecore#//Flow/handlePreRoute"/>
+      <genOperations ecoreOperation="nodered.ecore#//Flow/handlePreDeliver"/>
+    </genClasses>
+    <genClasses ecoreClass="nodered.ecore#//Flow_index">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference nodered.ecore#//Flow_index/folw_index"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference nodered.ecore#//Flow_index/events"/>
+      <genOperations ecoreOperation="nodered.ecore#//Flow_index/loadFlows"/>
+      <genOperations ecoreOperation="nodered.ecore#//Flow_index/load"/>
+      <genOperations ecoreOperation="nodered.ecore#//Flow_index/setFlows"/>
+      <genOperations ecoreOperation="nodered.ecore#//Flow_index/getNode"/>
+      <genOperations ecoreOperation="nodered.ecore#//Flow_index/getFlows"/>
+      <genOperations ecoreOperation="nodered.ecore#//Flow_index/addFlow"/>
+      <genOperations ecoreOperation="nodered.ecore#//Flow_index/getFlow"/>
+      <genOperations ecoreOperation="nodered.ecore#//Flow_index/updateFlow"/>
+      <genOperations ecoreOperation="nodered.ecore#//Flow_index/removeFlow"/>
+      <genOperations ecoreOperation="nodered.ecore#//Flow_index/start"/>
+      <genOperations ecoreOperation="nodered.ecore#//Flow_index/stop"/>
+    </genClasses>
+    <genClasses ecoreClass="nodered.ecore#//Node">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute nodered.ecore#//Node/EventEmitter"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute nodered.ecore#//Node/context"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference nodered.ecore#//Node/flow_node"/>
+    </genClasses>
+    <genClasses ecoreClass="nodered.ecore#//Node_index">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference nodered.ecore#//Node_index/reference"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference nodered.ecore#//Node_index/node_index"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference nodered.ecore#//Node_index/events"/>
+      <genOperations ecoreOperation="nodered.ecore#//Node_index/registerType"/>
+      <genOperations ecoreOperation="nodered.ecore#//Node_index/createNode"/>
+    </genClasses>
+    <genClasses ecoreClass="nodered.ecore#//Events">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference nodered.ecore#//Events/events"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference nodered.ecore#//Events/event"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference nodered.ecore#//Events/event2"/>
+      <genOperations ecoreOperation="nodered.ecore#//Events/wrapEventFunction"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

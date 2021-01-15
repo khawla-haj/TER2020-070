@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="nodered" nsURI="http://www.example.org/nodered" nsPrefix="nodered">
+  <eClassifiers xsi:type="ecore:EClass" name="Subflow" eSuperTypes="#//Flow">
+    <eOperations name="createNodeInSubflow"/>
+    <eOperations name="remapSubflowNodes"/>
+    <eOperations name="createSubflow"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="subflow" upperBound="-1"
+        eType="#//Flow" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Flow">
+    <eOperations name="stopNode"/>
+    <eOperations name="handleOnSend"/>
+    <eOperations name="handlePreRoute"/>
+    <eOperations name="handlePreDeliver"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Flow_index">
+    <eOperations name="loadFlows"/>
+    <eOperations name="load"/>
+    <eOperations name="setFlows"/>
+    <eOperations name="getNode"/>
+    <eOperations name="getFlows"/>
+    <eOperations name="addFlow"/>
+    <eOperations name="getFlow"/>
+    <eOperations name="updateFlow"/>
+    <eOperations name="removeFlow"/>
+    <eOperations name="start"/>
+    <eOperations name="stop"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="folw_index" eType="#//Flow"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="events" eType="#//Events"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Node">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="EventEmitter" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//AnySimpleType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="context" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//AnySimpleType"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="flow_node" upperBound="-1"
+        eType="#//Flow_index" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Node_index">
+    <eOperations name="registerType"/>
+    <eOperations name="createNode"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="reference" eType="#//Flow_index"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="node_index" eType="#//Node"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="events" eType="#//Events"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Events">
+    <eOperations name="wrapEventFunction"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="events" eType="#//Events"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="event" upperBound="-1"
+        eType="#//Subflow" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="event2" upperBound="-1"
+        eType="#//Flow" containment="true"/>
+  </eClassifiers>
+</ecore:EPackage>
