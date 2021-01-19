@@ -1,0 +1,10 @@
+C:\Users\ZHANG Tianyuan\Desktop\ter\UPnPNodeRed\bin\Debug\UPnPNodeREDBean.dll
+C:\Users\ZHANG Tianyuan\Desktop\ter\UPnPNodeRed\bin\Debug\UPnPNodeREDBean.pdb
+C:\Users\ZHANG Tianyuan\Desktop\ter\UPnPNodeRed\bin\Debug\Beans.dll
+C:\Users\ZHANG Tianyuan\Desktop\ter\UPnPNodeRed\bin\Debug\UPnP.dll
+C:\Users\ZHANG Tianyuan\Desktop\ter\UPnPNodeRed\bin\Debug\UPnP.pdb
+C:\Users\ZHANG Tianyuan\Desktop\ter\UPnPNodeRed\obj\Debug\UPnPNodeREDBean.csprojAssemblyReference.cache
+C:\Users\ZHANG Tianyuan\Desktop\ter\UPnPNodeRed\obj\Debug\UPnPNodeREDBean.csproj.CoreCompileInputs.cache
+C:\Users\ZHANG Tianyuan\Desktop\ter\UPnPNodeRed\obj\Debug\UPnPNodeREDBean.csproj.CopyComplete
+C:\Users\ZHANG Tianyuan\Desktop\ter\UPnPNodeRed\obj\Debug\UPnPNodeREDBean.dll
+C:\Users\ZHANG Tianyuan\Desktop\ter\UPnPNodeRed\obj\Debug\UPnPNodeREDBean.pdb

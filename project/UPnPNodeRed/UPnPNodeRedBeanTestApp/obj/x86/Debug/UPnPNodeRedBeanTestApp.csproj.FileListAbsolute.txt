@@ -1,0 +1,12 @@
+D:\Documents\I3S\Stages et PFE\Stage Meriam ZEKRI\Rendu_Meriam_ZEKRI\UPnPNodeRed\UPnPNodeRedBeanTestApp\bin\x86\Debug\UPnPNodeRedBeanTestApp.exe
+D:\Documents\I3S\Stages et PFE\Stage Meriam ZEKRI\Rendu_Meriam_ZEKRI\UPnPNodeRed\UPnPNodeRedBeanTestApp\bin\x86\Debug\UPnPNodeRedBeanTestApp.pdb
+D:\Documents\I3S\Stages et PFE\Stage Meriam ZEKRI\Rendu_Meriam_ZEKRI\UPnPNodeRed\UPnPNodeRedBeanTestApp\bin\x86\Debug\Beans.dll
+D:\Documents\I3S\Stages et PFE\Stage Meriam ZEKRI\Rendu_Meriam_ZEKRI\UPnPNodeRed\UPnPNodeRedBeanTestApp\bin\x86\Debug\UPnPNodeREDBean.dll
+D:\Documents\I3S\Stages et PFE\Stage Meriam ZEKRI\Rendu_Meriam_ZEKRI\UPnPNodeRed\UPnPNodeRedBeanTestApp\bin\x86\Debug\UPnP.dll
+D:\Documents\I3S\Stages et PFE\Stage Meriam ZEKRI\Rendu_Meriam_ZEKRI\UPnPNodeRed\UPnPNodeRedBeanTestApp\bin\x86\Debug\UPnPNodeREDBean.pdb
+D:\Documents\I3S\Stages et PFE\Stage Meriam ZEKRI\Rendu_Meriam_ZEKRI\UPnPNodeRed\UPnPNodeRedBeanTestApp\bin\x86\Debug\UPnP.pdb
+D:\Documents\I3S\Stages et PFE\Stage Meriam ZEKRI\Rendu_Meriam_ZEKRI\UPnPNodeRed\UPnPNodeRedBeanTestApp\obj\x86\Debug\UPnPNodeRedBeanTestApp.csprojAssemblyReference.cache
+D:\Documents\I3S\Stages et PFE\Stage Meriam ZEKRI\Rendu_Meriam_ZEKRI\UPnPNodeRed\UPnPNodeRedBeanTestApp\obj\x86\Debug\UPnPNodeRedBeanTestApp.csproj.CoreCompileInputs.cache
+D:\Documents\I3S\Stages et PFE\Stage Meriam ZEKRI\Rendu_Meriam_ZEKRI\UPnPNodeRed\UPnPNodeRedBeanTestApp\obj\x86\Debug\UPnPNodeRedBeanTestApp.csproj.CopyComplete
+D:\Documents\I3S\Stages et PFE\Stage Meriam ZEKRI\Rendu_Meriam_ZEKRI\UPnPNodeRed\UPnPNodeRedBeanTestApp\obj\x86\Debug\UPnPNodeRedBeanTestApp.exe
+D:\Documents\I3S\Stages et PFE\Stage Meriam ZEKRI\Rendu_Meriam_ZEKRI\UPnPNodeRed\UPnPNodeRedBeanTestApp\obj\x86\Debug\UPnPNodeRedBeanTestApp.pdb

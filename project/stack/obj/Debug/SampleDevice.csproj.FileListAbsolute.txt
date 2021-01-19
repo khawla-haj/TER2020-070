@@ -1,0 +1,8 @@
+C:\Users\ZHANG Tianyuan\Desktop\ter\stack\bin\Debug\SampleDevice.exe
+C:\Users\ZHANG Tianyuan\Desktop\ter\stack\bin\Debug\SampleDevice.pdb
+C:\Users\ZHANG Tianyuan\Desktop\ter\stack\bin\Debug\UPnP.dll
+C:\Users\ZHANG Tianyuan\Desktop\ter\stack\obj\Debug\SampleDevice.csprojAssemblyReference.cache
+C:\Users\ZHANG Tianyuan\Desktop\ter\stack\obj\Debug\SampleDevice.csproj.CoreCompileInputs.cache
+C:\Users\ZHANG Tianyuan\Desktop\ter\stack\obj\Debug\SampleDevice.csproj.CopyComplete
+C:\Users\ZHANG Tianyuan\Desktop\ter\stack\obj\Debug\SampleDevice.exe
+C:\Users\ZHANG Tianyuan\Desktop\ter\stack\obj\Debug\SampleDevice.pdb
