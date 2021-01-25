@@ -328,6 +328,8 @@ namespace SampleDevice.NodeRedAPI {
                 flow["nodes"].Add(JToken.FromObject(node));
                 //string body = JsonConvert.SerializeObject(flow);
 
+
+                Console.WriteLine(flow.ToString());
                 string response = launchRequest("flow/" + flowId, "PUT", flow.ToString());
                 return true;
             }

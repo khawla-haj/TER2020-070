@@ -6,3 +6,15 @@ C:\Users\ZHANG Tianyuan\Desktop\ter\stack\obj\Debug\SampleDevice.csproj.CoreComp
 C:\Users\ZHANG Tianyuan\Desktop\ter\stack\obj\Debug\SampleDevice.csproj.CopyComplete
 C:\Users\ZHANG Tianyuan\Desktop\ter\stack\obj\Debug\SampleDevice.exe
 C:\Users\ZHANG Tianyuan\Desktop\ter\stack\obj\Debug\SampleDevice.pdb
+C:\Users\ZHANG Tianyuan\Desktop\ter\khawla-haj\TER2020-070\project\stack\obj\Debug\SampleDevice.csprojAssemblyReference.cache
+C:\Users\ZHANG Tianyuan\Desktop\ter\khawla-haj\TER2020-070\project\stack\obj\Debug\SampleDevice.csproj.CoreCompileInputs.cache
+C:\Users\ZHANG Tianyuan\Desktop\ter\khawla-haj\TER2020-070\project\stack\obj\Debug\SampleDevice.exe
+C:\Users\ZHANG Tianyuan\Desktop\ter\khawla-haj\TER2020-070\project\stack\obj\Debug\SampleDevice.pdb
+C:\Users\ZHANG Tianyuan\Desktop\ter\khawla-haj\TER2020-070\project\stack\bin\Debug\SampleDevice.exe
+C:\Users\ZHANG Tianyuan\Desktop\ter\khawla-haj\TER2020-070\project\stack\bin\Debug\SampleDevice.pdb
+C:\Users\ZHANG Tianyuan\Desktop\ter\khawla-haj\TER2020-070\project\stack\bin\Debug\Newtonsoft.Json.dll
+C:\Users\ZHANG Tianyuan\Desktop\ter\khawla-haj\TER2020-070\project\stack\bin\Debug\UPnP.dll
+C:\Users\ZHANG Tianyuan\Desktop\ter\khawla-haj\TER2020-070\project\stack\bin\Debug\Newtonsoft.Json.xml
+C:\Users\ZHANG Tianyuan\Desktop\ter\khawla-haj\TER2020-070\project\stack\obj\Debug\SampleDevice.csproj.CopyComplete
+C:\Users\ZHANG Tianyuan\Desktop\ter\khawla-haj\TER2020-070\project\stack\bin\Debug\websocket-sharp.dll
+C:\Users\ZHANG Tianyuan\Desktop\ter\khawla-haj\TER2020-070\project\stack\bin\Debug\websocket-sharp.xml

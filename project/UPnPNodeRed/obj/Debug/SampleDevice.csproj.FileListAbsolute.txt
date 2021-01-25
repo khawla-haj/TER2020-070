@@ -12,3 +12,17 @@ C:\Users\ZHANG Tianyuan\Desktop\ter\UPnPNodeRed\obj\Debug\SampleDevice.csproj.Co
 C:\Users\ZHANG Tianyuan\Desktop\ter\UPnPNodeRed\obj\Debug\SampleDevice.csproj.CopyComplete
 C:\Users\ZHANG Tianyuan\Desktop\ter\UPnPNodeRed\obj\Debug\SampleDevice.exe
 C:\Users\ZHANG Tianyuan\Desktop\ter\UPnPNodeRed\obj\Debug\SampleDevice.pdb
+C:\Users\ZHANG Tianyuan\Desktop\ter\khawla-haj\TER2020-070\project\UPnPNodeRed\bin\Debug\SampleDevice.exe.config
+C:\Users\ZHANG Tianyuan\Desktop\ter\khawla-haj\TER2020-070\project\UPnPNodeRed\bin\Debug\SampleDevice.exe
+C:\Users\ZHANG Tianyuan\Desktop\ter\khawla-haj\TER2020-070\project\UPnPNodeRed\bin\Debug\SampleDevice.pdb
+C:\Users\ZHANG Tianyuan\Desktop\ter\khawla-haj\TER2020-070\project\UPnPNodeRed\bin\Debug\Newtonsoft.Json.dll
+C:\Users\ZHANG Tianyuan\Desktop\ter\khawla-haj\TER2020-070\project\UPnPNodeRed\bin\Debug\UPnP.dll
+C:\Users\ZHANG Tianyuan\Desktop\ter\khawla-haj\TER2020-070\project\UPnPNodeRed\bin\Debug\websocket-sharp.dll
+C:\Users\ZHANG Tianyuan\Desktop\ter\khawla-haj\TER2020-070\project\UPnPNodeRed\bin\Debug\Newtonsoft.Json.xml
+C:\Users\ZHANG Tianyuan\Desktop\ter\khawla-haj\TER2020-070\project\UPnPNodeRed\bin\Debug\UPnP.pdb
+C:\Users\ZHANG Tianyuan\Desktop\ter\khawla-haj\TER2020-070\project\UPnPNodeRed\bin\Debug\websocket-sharp.xml
+C:\Users\ZHANG Tianyuan\Desktop\ter\khawla-haj\TER2020-070\project\UPnPNodeRed\obj\Debug\SampleDevice.csprojAssemblyReference.cache
+C:\Users\ZHANG Tianyuan\Desktop\ter\khawla-haj\TER2020-070\project\UPnPNodeRed\obj\Debug\SampleDevice.csproj.CoreCompileInputs.cache
+C:\Users\ZHANG Tianyuan\Desktop\ter\khawla-haj\TER2020-070\project\UPnPNodeRed\obj\Debug\SampleDevice.csproj.CopyComplete
+C:\Users\ZHANG Tianyuan\Desktop\ter\khawla-haj\TER2020-070\project\UPnPNodeRed\obj\Debug\SampleDevice.exe
+C:\Users\ZHANG Tianyuan\Desktop\ter\khawla-haj\TER2020-070\project\UPnPNodeRed\obj\Debug\SampleDevice.pdb
