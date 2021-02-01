@@ -1,13 +1,11 @@
 
-# Plateforme Logicielle pour l'Internet des Objets Connectés et augmentation de l'assistance aux agents de terrain.
+# Software platform for the Internet of Connected Objects and increased assistance to field agents.
 
 
 In The I3S laboratory, a research teem works on the design and implementation of a software framework to facilitate the continuity of user services in a dynamic way, taking into account the context.
 
 This teem work on the devolopment based on the composition of components and services witch for serve years now represents a potential solution for the construction of large software packages by breaking down features into smaller and, if possible, independent entities that then need to be assembled. And all of these are seen in the LCA (Lightweight Components Architecture) model that is running correctly under WCOMP, a transformation under NODE RED is requested. The aim is to implement the LCA modele into NODE RED.
 
-This report presents the plan of our report, and a description of the tools in this project.
-We have three main chapters. The first chapter concerns the context of our project with a presentation of the Node RED with a comparison between Wcomp and Node RED. In the second chapter we will gernerate tools , and in the last chapter we will describe our advancement.
 
 
 # Context
