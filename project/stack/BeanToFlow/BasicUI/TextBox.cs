@@ -15,6 +15,21 @@ namespace SampleDevice.BeanToFlow.BasicUI
         private JToken flow_tk;
         private dynamic flow_name;
         private dynamic flow_id;
+        private string Clear = "Clear";
+        private string set_Text = "set_Text";
+        private string get_Text = "get_Text";
+        private string TextChanged = "TextChanged";
+        private string Event_get_Text = "Event_get_Text";
+        private string link_in_Clear = "link_in_Clear";
+        private string link_in_set_Text = "link_in_set_Text";
+        private string link_in_get_Text = "link_in_get_Text";
+        private string link_out_TextChanged = "link_out_TextChanged";
+        private string link_out_Event_get_Text = "link_out_Event_get_Text";
+
+
+
+
+
         public TextBox(string flow_name, NodeRedAPI.NodeRedAPI api) : base(flow_name, api)
         {
             this.flow_name = flow_name;
@@ -63,30 +78,30 @@ namespace SampleDevice.BeanToFlow.BasicUI
 
                         if (type == "function")
                         {
-                            if ((string)node["name"] == "Clear")
+                            if ((string)node["name"] == Clear)
                                 Clear_id = (string)node["id"];
-                            if ((string)node["name"] == "Set_Text")
+                            if ((string)node["name"] == set_Text)
                                 Set_Text_id = (string)node["id"];
-                            if ((string)node["name"] == "TextChanged")
+                            if ((string)node["name"] == TextChanged)
                                 TextChanged_id = (string)node["id"];
-                            if ((string)node["name"] == "EventGetPropRet")
+                            if ((string)node["name"] == Event_get_Text)
                                 EventGetPropRet_id = (string)node["id"];
-                            if ((string)node["name"] == "GetProp")
+                            if ((string)node["name"] == get_Text)
                                 GetProp_id = (string)node["id"];
                         }
                         if (type == "link in")
                         {
-                            if ((string)node["name"] == "link_in_Clear")
+                            if ((string)node["name"] == link_in_Clear)
                                 link_in_Clear_id = (string)node["id"];
-                            if ((string)node["name"] == "link_in_Set_Text")
+                            if ((string)node["name"] == link_in_set_Text)
                                 link_in_Set_Text_id = (string)node["id"];
-                            if ((string)node["name"] == "link_in_GetProp")
+                            if ((string)node["name"] == link_in_get_Text)
                                 link_in_GetProp_id = (string)node["id"];
                         }
                         if (type == "link out") { 
-                            if ((string)node["name"] == "link_out_TextChanged")
+                            if ((string)node["name"] == link_out_TextChanged)
                                 link_out_TextChanged_id = (string)node["id"];
-                            if ((string)node["name"] == "link_out_EventGetPropRet")
+                            if ((string)node["name"] == link_out_Event_get_Text)
                                 link_out_EventGetPropRet_id = (string)node["id"];
                         }
                         if (type == "ui_text_input")
@@ -101,24 +116,24 @@ namespace SampleDevice.BeanToFlow.BasicUI
 
                         if (type == "function")
                         {
-                            if ((string)node["name"] == "Clear")
+                            if ((string)node["name"] == Clear)
                                 node["wires"][0][0] = ui_text_input_id;
-                            if ((string)node["name"] == "Set_Text")
+                            if ((string)node["name"] == set_Text)
                                 node["wires"][0][0] = ui_text_input_id;
-                            if ((string)node["name"] == "TextChanged")
+                            if ((string)node["name"] == TextChanged)
                                 node["wires"][0][0] = link_out_TextChanged_id;
-                            if ((string)node["name"] == "EventGetPropRet")
+                            if ((string)node["name"] == Event_get_Text)
                                 node["wires"][0][0] = link_out_EventGetPropRet_id;
-                            if ((string)node["name"] == "GetProp")
+                            if ((string)node["name"] == get_Text)
                                 node["wires"][0][0] = EventGetPropRet_id;
                         }
                         if (type == "link in")
                         {
-                            if ((string)node["name"] == "link_in_Clear")
+                            if ((string)node["name"] == link_in_Clear)
                                 node["wires"][0][0] = Clear_id;
-                            if ((string)node["name"] == "link_in_Set_Text")
+                            if ((string)node["name"] == link_in_set_Text)
                                 node["wires"][0][0] = Set_Text_id;
-                            if ((string)node["name"] == "link_in_GetProp")
+                            if ((string)node["name"] == link_in_get_Text)
                                 node["wires"][0][0] = GetProp_id;
                             //if ((string)node["name"] == "link_out_TextChanged")
                                 //link_out_TextChanged_id = (string)node["id"];

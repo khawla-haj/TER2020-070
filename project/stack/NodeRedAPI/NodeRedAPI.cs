@@ -477,7 +477,7 @@ namespace SampleDevice.NodeRedAPI
                                     }
                                 }
                                 group_id = (GetRandomHexNumber(8) + "." + GetRandomHexNumber(6)).ToLower();
-                                JObject group_jo2 = new JObject { { "id", group_id }, { "type", "ui_group" }, { "z", "" }, { "name", "Elements of entries" }, { "tab", tab_id }, { "order", group }, { "disp", true }, { "collapse", false } };
+                                JObject group_jo2 = new JObject { { "id", group_id }, { "type", "ui_group" }, { "z", "" }, { "name", "Elements of entries" }, { "tab", tab_id }, { "order", group }, { "disp", true }, { "width", 6 } };
                                 flows.Add(JToken.FromObject(group_jo2));
                                 launchRequest("flows", "POST", flows.ToString());
                                 dynamic[] dashboard_id_exist2 = new dynamic[2] { tab_id, group_id };
@@ -496,7 +496,7 @@ namespace SampleDevice.NodeRedAPI
             dynamic[] dashboard_id = new dynamic[2] {tab_id,group_id };
 
             JObject tab_jo = new JObject { { "id", tab_id }, { "type", "ui_tab" }, {"z","" },{"name", tab_name },{"icon", "dashboard" },{"order",tab  },{"disabled", false },{"hidden", false } };
-            JObject group_jo = new JObject { { "id", group_id }, { "type", "ui_group" }, { "z", "" }, { "name", "Elements of entries" }, { "tab", tab_id }, { "order", "1" }, { "disp", true }, { "collapse", false } };
+            JObject group_jo = new JObject { { "id", group_id }, { "type", "ui_group" }, { "z", "" }, { "name", "Elements of entries" }, { "tab", tab_id }, { "order", "1" }, { "disp", true }, { "width", 6 } };
 
 
             //dynamic tab_json = "{\"id\":\""+tab_id+"\",\"type\":\"ui_tab\",\"z\":\"\",\"name\":\""+tab_name+"\",\"icon\":\"dashboard\",\"order\":"+tab+",\"disabled\":false,\"hidden\":false}";
@@ -513,7 +513,7 @@ namespace SampleDevice.NodeRedAPI
         {
             string response = launchRequest("flows", "GET", null);
             JArray flows = JArray.Parse(response);
-            dynamic flow_id = (GetRandomHexNumber(8) + "." + GetRandomHexNumber(6)).ToLower();
+            dynamic flow_id = (GetRandomHexNumber(8) + "." + GetRandomHexNumber(5)).ToLower();
             JObject flow_jo = new JObject { { "id", flow_id }, { "type", "tab" }, { "label", flow_name }, { "disabled", false }, { "info", "" } };
             flows.Add(JToken.FromObject(flow_jo));
             launchRequest("flows", "POST", flows.ToString());

@@ -107,9 +107,6 @@
     <Compile Include="BeanToFlow\BasicUI\TextBox.cs" />
     <Compile Include="CheckStateVariable.cs" />
     <Compile Include="DiscoverDevice.cs" />
-    <Compile Include="DvStructuralService.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="Main.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -117,12 +114,10 @@
     <Compile Include="NodeRedAPI\Node.cs" />
     <Compile Include="NodeRedAPI\NodeRedAPI.cs" />
     <Compile Include="Operation.cs" />
-    <Compile Include="SampleDevice.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="TestJson.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="LinksTemplateJson\Simple_Link.json" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
@@ -135,6 +130,7 @@
   <ItemGroup>
     <Content Include="BeanToFlow\BasicUI\test.js" />
     <Content Include="BeanToFlow\BasicUI\test2.js" />
+    <Content Include="LinksTemplateJson\Imcompable_Link.js" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

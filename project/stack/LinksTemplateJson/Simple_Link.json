@@ -1,0 +1,49 @@
+[
+    {
+        "id": "cf8a47bc.e35b18",
+        "type": "tab",
+        "label": "SimpleLink",
+        "disabled": false,
+        "info": "",
+        "nodes": [
+            {
+                "id": "20b4b40a.01d44c",
+                "type": "link in",
+                "z": "cf8a47bc.e35b18",
+                "name": "linkin_simplelink",
+                "links": [
+                    "ka0fbvvm.mr60a1"
+                ],
+                "x": 355,
+                "y": 320,
+                "wires": [
+                    [
+                        "cb94a201.54188"
+                    ]
+                ]
+            },
+            {
+                "id": "cb94a201.54188",
+                "type": "link out",
+                "z": "cf8a47bc.e35b18",
+                "name": "linkout_simplelink",
+                "links": [
+                    "ah7yc16j.k78aoa"
+                ],
+                "x": 755,
+                "y": 320,
+                "wires": []
+            },
+            {
+                "id": "89113f23.26d2a",
+                "type": "comment",
+                "z": "cf8a47bc.e35b18",
+                "name": "This is an simple link from Flow: textBox1: method: TextChanged to Flow: textBox2 method: set_Text ",
+                "info": "",
+                "x": 500,
+                "y": 200,
+                "wires": []
+            }
+        ]
+    }
+]
