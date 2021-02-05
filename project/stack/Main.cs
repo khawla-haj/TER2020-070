@@ -6,6 +6,7 @@ using OpenSource.UPnP;
 using OpenSource.DeviceBuilder;
 using SampleDevice;
 using SampleDevice.NodeRedAPI;
+using System.Threading;
 
 namespace OpenSource.DeviceBuilder
 {
@@ -27,13 +28,14 @@ namespace OpenSource.DeviceBuilder
 
 			dd = new DiscoverDevice();
 			dd.StartScan();
-
-			string[][] s = new string[2][];
-			s[0] = new string[1];
-			s[1] = new string[2] { "Shirdrn", "Hamtty" };
+	
 			
 
-			
+			Thread thread2 = new Thread(new ThreadStart(dd.test));
+			thread2.Start();
+
+
+
 
 			// Starting UPnP Device
 			//System.Console.WriteLine("UPnP .NET Framework Stack");

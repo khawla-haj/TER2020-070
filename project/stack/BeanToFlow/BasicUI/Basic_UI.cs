@@ -35,7 +35,7 @@ namespace SampleDevice.BeanToFlow.BasicUI
         public bool Generate_Flow(dynamic flow)
         {
             this.api.addFlowFromJason(this.flow_id,flow);
-            Console.WriteLine(flow_id);
+            //Console.WriteLine(flow_id);
             return true;
         }
     }

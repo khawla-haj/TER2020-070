@@ -464,7 +464,7 @@ namespace SampleDevice.NodeRedAPI
                             {
                                 string name2 = (string)flows.ElementAt(j)["name"];
                                 string tab2 = (string)flows.ElementAt(j)["tab"];
-                                Console.WriteLine(name2);
+                                //Console.WriteLine(name2);
                                 if (tab2==tab_id)
                                 {
                                     group++;
@@ -472,20 +472,20 @@ namespace SampleDevice.NodeRedAPI
                                     {
                                         group_id = (string)flows.ElementAt(j)["id"];
                                         dynamic[] dashboard_id_exist = new dynamic[2] { tab_id, group_id };
-                                        Console.WriteLine("exists");
+                                        //Console.WriteLine("exists");
                                         return dashboard_id_exist;
                                     }
                                 }
-                                group_id = (GetRandomHexNumber(8) + "." + GetRandomHexNumber(6)).ToLower();
-                                JObject group_jo2 = new JObject { { "id", group_id }, { "type", "ui_group" }, { "z", "" }, { "name", "Elements of entries" }, { "tab", tab_id }, { "order", group }, { "disp", true }, { "width", 6 } };
-                                flows.Add(JToken.FromObject(group_jo2));
-                                launchRequest("flows", "POST", flows.ToString());
-                                dynamic[] dashboard_id_exist2 = new dynamic[2] { tab_id, group_id };
-                                return dashboard_id_exist2;
+                                
                             }
                         }
-                        
-                        flag = true; 
+
+                        group_id = (GetRandomHexNumber(8) + "." + GetRandomHexNumber(6)).ToLower();
+                        JObject group_jo2 = new JObject { { "id", group_id }, { "type", "ui_group" }, { "z", "" }, { "name", "Elements of entries" }, { "tab", tab_id }, { "order", group }, { "disp", true }, { "width", 6 } };
+                        flows.Add(JToken.FromObject(group_jo2));
+                        launchRequest("flows", "POST", flows.ToString());
+                        dynamic[] dashboard_id_exist2 = new dynamic[2] { tab_id, group_id };
+                        return dashboard_id_exist2;
                     }
                     
                 }

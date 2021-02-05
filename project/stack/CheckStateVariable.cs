@@ -9,9 +9,8 @@ namespace SampleDevice
     {
 		Dictionary<string, string[]> actions = new Dictionary<string, string[]>();
 
-		public CheckStateVariable(Dictionary<string, string[]> actions)
+		public CheckStateVariable()
 		{
-			this.actions = actions;
 		}
 
 		public string[][] CheckValue(string value)
@@ -70,10 +69,32 @@ namespace SampleDevice
 					}
 					break;
 				case "DEL_LINK":
-					com = "REMOVEl";
-					parameter = new string[1];
-					parameter[0] = arr[2];
-					Console.WriteLine("   - remove link");
+					string[] link_del = arr[2].Split('-');
+					if (link_del.GetValue(5).Equals(""))
+					{
+						com = "DELsimplel";
+						parameter = new string[4];
+						string linkfrom = link_del.GetValue(1).ToString();
+						string linkto = link_del.GetValue(2).ToString();
+						string operation1 = link_del.GetValue(3).ToString();
+						string operation2 = link_del.GetValue(4).ToString();
+						parameter[0] = linkfrom; parameter[1] = linkto; parameter[2] = operation1; parameter[3] = operation2;
+						Console.WriteLine("   - delete simple link from " + linkfrom + " to " + linkto + " and operation1 is " + operation1 + " and operation2 is " + operation2);
+						Console.WriteLine("");
+					}
+					else
+					{
+						com = "DELimconptablel";
+						parameter = new string[5];
+						string linkfrom = link_del.GetValue(1).ToString();
+						string linkto = link_del.GetValue(2).ToString();
+						string operation1 = link_del.GetValue(3).ToString();
+						string operation2 = link_del.GetValue(4).ToString();
+						string operation3 = link_del.GetValue(5).ToString();
+						parameter[0] = linkfrom; parameter[1] = linkto; parameter[2] = operation1; parameter[3] = operation2; parameter[4] = operation3;
+						Console.WriteLine("   - delete imcompatible link from " + linkfrom + " to " + linkto + " and operation1 is " + operation1 + " and operation2 is " + operation2 + " and operation3 is " + operation3);
+						Console.WriteLine("");
+					}
 					break;
 			}
 

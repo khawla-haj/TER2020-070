@@ -9,6 +9,7 @@ using SampleDevice.NodeRedAPI;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System.Configuration;
+using System.Collections;
 
 namespace SampleDevice
 {
@@ -23,9 +24,10 @@ namespace SampleDevice
 
 		public UPnPService wcompService;
 		public UPnPService noderedService;
+		public int i = 0;
 
-		Dictionary<string, string[]> actions = new Dictionary<string, string[]>();
 
+		public ArrayList output = new ArrayList();
 
 
 
@@ -33,17 +35,34 @@ namespace SampleDevice
 		{
 			wcompControlPoint = new UPnPSmartControlPoint(OnDeviceAdded1, OnServiceAdded, "urn:wcomp-fr:device:StructuralDevice:1");
 			noderedControlPoint = new UPnPSmartControlPoint(OnDeviceAdded2, OnServiceAdded, "urn:schemas-upnp-org:device:NodeRED:1");
+
+			
 		}
 
+		public void test()
+		{
+		
+			while (true)
+			{
+				if (output.Count != 0)
+				{
+					Console.WriteLine("thread running");
+					CheckStateVariable csv = new CheckStateVariable();
+					Operation op = new Operation(api, csv.CheckValue(output[0].ToString()));
+					op.CheckAction();
+					output.RemoveAt(0);
+				}
+			}
+		}
 
-		private void OnServiceAdded(UPnPSmartControlPoint sender, UPnPService service)
+	private void OnServiceAdded(UPnPSmartControlPoint sender, UPnPService service)
 		{
 		}
 
 		private void OnDeviceAdded1(UPnPSmartControlPoint cp, UPnPDevice device)
 		{
-			//Console.WriteLine("found device " + device.DeviceURN);
 			
+
 			this.deviceBindedFromWcomp = device;
 			Console.WriteLine("found wcomp device " + deviceBindedFromWcomp.DeviceURN);
 					
@@ -51,17 +70,19 @@ namespace SampleDevice
 			wcompService = deviceBindedFromWcomp.GetService("urn:upnp-org:serviceId:StructuralService");
 			//noderedService = this.noderedControler.GetService("urn:upnp-org:serviceId:NodeREDAPIService");
 
-			
+			//service.GetStateVariableObject("output");
 
-			wcompService.Subscribe(600, (service, subscribeok) =>
+			wcompService.Subscribe(500, (service, subscribeok) =>
 			{
 				if (!subscribeok) return;
-
 				var stateVariable = service.GetStateVariableObject("output");
 				stateVariable.OnModified += StateValueChanged;
 
 				Console.WriteLine("state variable " + stateVariable);
 			});
+
+			
+
 
 		}
 		private void OnDeviceAdded2(UPnPSmartControlPoint cp, UPnPDevice device)
@@ -75,11 +96,14 @@ namespace SampleDevice
 		private void StateValueChanged(UPnPStateVariable sender, object newvalue)
 		{
 			Console.WriteLine("output: "+sender.Value);
-			CheckStateVariable csv = new CheckStateVariable(this.actions);
+			
 			//csv.CheckValue(sender.Value.ToString());
-
-			//Operation op = new Operation(noderedService, csv.CheckValue(sender.Value.ToString()));
-			Operation op = new Operation(api, csv.CheckValue(sender.Value.ToString()));
+			if (i != 0)
+			{
+				output.Add(sender.Value);
+			}
+			i++;
+			
 		}
 
 
