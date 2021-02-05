@@ -623,6 +623,7 @@ namespace SampleDevice
 			return true;
 		}
 
+
 		public static string GetRandomString(int length)
 		{
 			byte[] b = new byte[4];
