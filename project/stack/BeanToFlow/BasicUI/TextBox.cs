@@ -159,7 +159,7 @@ namespace SampleDevice.BeanToFlow.BasicUI
 
                 }
             }
-            //Console.WriteLine(flow_tk);
+            Console.WriteLine(flow_tk);
             return flow_tk;
         }
         public bool AddTextBoxFlow()
@@ -198,3 +198,12 @@ namespace SampleDevice.BeanToFlow.BasicUI
         }
     }
 }
+
+
+
+
+
+
+
+
+

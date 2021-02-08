@@ -471,7 +471,7 @@ namespace SampleDevice.NodeRedAPI
                                     if (name2 == "Elements of entries")
                                     {
                                         group_id = (string)flows.ElementAt(j)["id"];
-                                        dynamic[] dashboard_id_exist = new dynamic[2] { tab_id, group_id };
+                                        dynamic[] dashboard_id_exist = new dynamic[3] { tab_id, group_id ,group};
                                         //Console.WriteLine("exists");
                                         return dashboard_id_exist;
                                     }
@@ -484,7 +484,7 @@ namespace SampleDevice.NodeRedAPI
                         JObject group_jo2 = new JObject { { "id", group_id }, { "type", "ui_group" }, { "z", "" }, { "name", "Elements of entries" }, { "tab", tab_id }, { "order", group }, { "disp", true }, { "width", 6 } };
                         flows.Add(JToken.FromObject(group_jo2));
                         launchRequest("flows", "POST", flows.ToString());
-                        dynamic[] dashboard_id_exist2 = new dynamic[2] { tab_id, group_id };
+                        dynamic[] dashboard_id_exist2 = new dynamic[3] { tab_id, group_id,group };
                         return dashboard_id_exist2;
                     }
                     
@@ -493,7 +493,7 @@ namespace SampleDevice.NodeRedAPI
             
             tab_id = (GetRandomHexNumber(8) + "." + GetRandomHexNumber(5)).ToLower();
             group_id = (GetRandomHexNumber(8) + "." + GetRandomHexNumber(6)).ToLower();
-            dynamic[] dashboard_id = new dynamic[2] {tab_id,group_id };
+            dynamic[] dashboard_id = new dynamic[3] {tab_id,group_id,group };
 
             JObject tab_jo = new JObject { { "id", tab_id }, { "type", "ui_tab" }, {"z","" },{"name", tab_name },{"icon", "dashboard" },{"order",tab  },{"disabled", false },{"hidden", false } };
             JObject group_jo = new JObject { { "id", group_id }, { "type", "ui_group" }, { "z", "" }, { "name", "Elements of entries" }, { "tab", tab_id }, { "order", "1" }, { "disp", true }, { "width", 6 } };

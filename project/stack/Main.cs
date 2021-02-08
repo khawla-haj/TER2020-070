@@ -7,6 +7,7 @@ using OpenSource.DeviceBuilder;
 using SampleDevice;
 using SampleDevice.NodeRedAPI;
 using System.Threading;
+using Newtonsoft.Json.Linq;
 
 namespace OpenSource.DeviceBuilder
 {
@@ -29,12 +30,11 @@ namespace OpenSource.DeviceBuilder
 			dd = new DiscoverDevice();
 			dd.StartScan();
 	
-			
-
 			Thread thread2 = new Thread(new ThreadStart(dd.test));
 			thread2.Start();
 
 
+			
 
 
 			// Starting UPnP Device

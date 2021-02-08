@@ -7,6 +7,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using OpenSource.UPnP;
 using SampleDevice.BeanToFlow.BasicUI;
+using SampleDevice.BeanToFlow.UPnPLight;
 using SampleDevice.NodeRedAPI;
 
 namespace SampleDevice
@@ -47,6 +48,8 @@ namespace SampleDevice
 				//string[] par = this.res["ADDImcomptablel"];
 				return this.DelImcomptableLink(this.res[1][0], this.res[1][1], this.res[1][2], this.res[1][3], this.res[1][4]);
 			}
+			if (this.res[0][0] == null)
+				return false;
 			return true;
 		}
 
@@ -58,6 +61,13 @@ namespace SampleDevice
 				case("System.Windows.Forms.TextBox"):
 					TextBox btf = new TextBox(name, this.api);
 					break;
+				case ("WComp.UPnPDevice.Network_Light__LAPTOP_2OTJT3VN_"):
+					NetWorkLight netWorkLight = new NetWorkLight(name, this.api);
+					break;
+				case ("System.Windows.Forms.CheckBox"):
+					CheckBox checkBox = new CheckBox(name, this.api);
+					break;
+					
 			}
 			return true;
 

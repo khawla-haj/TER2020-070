@@ -104,7 +104,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="BeanToFlow\BasicUI\Basic_UI.cs" />
+    <Compile Include="BeanToFlow\BasicUI\CheckBox.cs" />
     <Compile Include="BeanToFlow\BasicUI\TextBox.cs" />
+    <Compile Include="BeanToFlow\UPnPLight\NetWorkLight.cs" />
     <Compile Include="CheckStateVariable.cs" />
     <Compile Include="DiscoverDevice.cs" />
     <Compile Include="Main.cs">
