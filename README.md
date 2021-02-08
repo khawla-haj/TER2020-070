@@ -2,15 +2,6 @@
 # Software platform for the Internet of Connected Objects and increased assistance to field agents.
 
 
-In The I3S laboratory, a research teem works on the design and implementation of a software framework to facilitate the continuity of user services in a dynamic way, taking into account the context.
+In recent years we have often heard the term "BYOD" (Bring Your Own Device), a trend often used by companies to allow their agents to use their personal equipment in a business context. But with the evolution of the IOT field, each human agent has a lot of connected objects (smartphone, tablet, connected glasses ...). And when we invoke the IOT domain, the dynamic nature of the services related to these objects and their availability  is the first thing that comes to mind. The appearance and disappearance of these connected objects around the agent makes the development of software assistants that can communicate with each other more complex. In software terms, this requires the implementation of self-adaptive software layers because these devices use different communication protocols and interfaces. This kind of problem has led a research team In I3S laboratory to create a prototype, WComp which adapts itself to the evolution of infrastructure in terms of the evolution of services available at any given time.
 
-This teem work on the devolopment based on the composition of components and services witch for serve years now represents a potential solution for the construction of large software packages by breaking down features into smaller and, if possible, independent entities that then need to be assembled. And all of these are seen in the LCA (Lightweight Components Architecture) model that is running correctly under WCOMP, a transformation under NODE RED is requested. The aim is to implement the LCA modele into NODE RED.
-
-
-
-# Context
-
-Our purpose in this project is to develop and construct a software system to support the continuity of user services by dynamically taking context into account. This platform should also make it possible to recognize the availability and existence of the services and to adapt our application to the development of the infrastructure of the services in order to conform to the reality of the sector.
-
- The numerous services/devices available are detected using the UPnP protocol. Moreover, each time new UPnP service is discovered by the tool, it will send a command to the WComp container's the tool is connected with, to create a new proxy component corresponding to this new UPnP service. 
-   The Weaver enables you to customize and apply rules according to the current context between components. The Weaver has access to a variety of rules in .aa files that are predefined. It will then decide whether the appropriate proxies are present for each of the rules and, if so, apply the corresponding rules by linking a component event to another component method.
+WComp based on the composition of components and services witch for serve years now represents a potential solution for the construction of large software packages by breaking down features into smaller and, if possible, independent entities that then need to be assembled. And all of these are seen in the LCA (Lightweight Components Architecture) model that is running correctly under WComp, but the main the main problem, WComp is not comercialisable that ‘s why we will transform LCA model under NODE-RED flow and make a graphical interface for filed officiers.
