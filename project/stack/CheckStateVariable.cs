@@ -96,6 +96,10 @@ namespace SampleDevice
 						Console.WriteLine("");
 					}
 					break;
+				case "TYPE_LOAD":
+					break;
+				case "NOTICE":
+					break;
 			}
 
 			//this.actions.Add(com, parameter);
