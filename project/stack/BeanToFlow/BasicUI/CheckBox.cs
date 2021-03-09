@@ -52,7 +52,7 @@ namespace SampleDevice.BeanToFlow.BasicUI
 
             string serJson = string.Format("{{\"id\":\"{0}\",\"label\":\"{1}\",\"disabled\":false,\"info\":\"\",\"nodes\":[" +
                 "{{\"id\":\"{2}\",\"type\":\"function\",\"z\":\"{0}\",\"name\":\"Click\",\"func\":\"if (msg.event == \\\"Click\\\"){{\\n    msg.payload = \\\"Click\\\";\\n    return msg;\\n}}\\n\",\"outputs\":1,\"noerr\":0,\"initialize\":\"\",\"finalize\":\"\",\"x\":830,\"y\":260,\"wires\":[[\"{6}\"]]}}," +
-                "{{\"id\":\"{3}\",\"type\":\"function\",\"z\":\"{0}\",\"name\":\"Event_get_Checked\",\"func\":\"if(msg.event == \\\"GetProp\\\")\\n    return msg;\",\"outputs\":1,\"noerr\":0,\"initialize\":\"\",\"finalize\":\"\",\"x\":880,\"y\":420,\"wires\":[[\"{7}\"]]}}," +
+                "{{\"id\":\"{3}\",\"type\":\"function\",\"z\":\"{0}\",\"name\":\"Event_get_Checked\",\"func\":\"if(msg.event == \\\"GetProp\\\"){{\\n var parameters = new Array();\\n parameters.push(msg.payload);\\n msg.payload = parameters;\\n    return msg;}}\",\"outputs\":1,\"noerr\":0,\"initialize\":\"\",\"finalize\":\"\",\"x\":880,\"y\":420,\"wires\":[[\"{7}\"]]}}," +
                 "{{\"id\":\"{4}\",\"type\":\"function\",\"z\":\"{0}\",\"name\":\"get_Checked\",\"func\":\"msg.topic = \\\"GetProp\\\";\\nreturn msg;\",\"outputs\":1,\"noerr\":0,\"initialize\":\"\",\"finalize\":\"\",\"x\":330,\"y\":340,\"wires\":[[\"{5}\"]]}}," +
                 "{{\"id\":\"{5}\",\"type\":\"function\",\"z\":\"{0}\",\"name\":\"switch_Function\",\"func\":\"if(msg.topic==\\\"Click\\\"){{\\n   msg.event = \\\"Click\\\";\\n   flow.set(\\\"bool\\\", msg.payload);\\n}}\\nif(msg.topic==\\\"GetProp\\\"){{\\n   msg.event = \\\"GetProp\\\";\\n   msg.payload = flow.get(\\\"bool\\\");\\n}}\\nreturn msg;\",\"outputs\":1,\"noerr\":0,\"initialize\":\"\",\"finalize\":\"\",\"x\":600,\"y\":340,\"wires\":[[\"{2}\",\"{3}\"]]}}," +
                 "{{\"id\":\"{6}\",\"type\":\"link out\",\"z\":\"{0}\",\"name\":\"link_out_Click\",\"links\":[],\"x\":1035,\"y\":260}}," +
@@ -61,7 +61,7 @@ namespace SampleDevice.BeanToFlow.BasicUI
                 "{{\"id\":\"{11}\",\"type\":\"link in\",\"z\":\"{0}\",\"name\":\"link_in_get_Checked\",\"links\":[],\"x\":155,\"y\":340,\"wires\":[[\"{4}\"]]}}]}}", flow_id, flow_name, Click_id, Event_get_id, get_Checked_id, switch_Function_id, link_out_Click, link_out_Event_get_Checked_id, ui_switch_id, group_id, order, link_in_get_Checked);
 
             api.launchRequest("flow/" + flow_id, "PUT", serJson.ToString());
-            Console.WriteLine(serJson);
+            //Console.WriteLine(serJson);
             return true;
         }
 

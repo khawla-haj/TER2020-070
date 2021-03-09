@@ -1,6 +1,11 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\stack",
+    "\\stack\\BeanToFlow",
+    "\\stack\\BeanToFlow\\BasicUI",
+    "\\stack\\BeanToFlow\\UPnPLight"
   ],
+  "SelectedNode": "\\stack\\BeanToFlow\\BasicUI\\TextBox2.cs",
   "PreviewInSolutionExplorer": false
 }

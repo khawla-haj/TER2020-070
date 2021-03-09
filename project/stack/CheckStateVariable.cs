@@ -22,6 +22,7 @@ namespace SampleDevice
 
 			//Dictionary<string, string[]> command = new Dictionary<string, string[]>();
 			string[][] command = new string[2][];
+
 			switch (arr.GetValue(1))
 			{
 				case "NEW_BEAN":
@@ -30,15 +31,12 @@ namespace SampleDevice
 					parameter[0] = arr[2];		//name
 					parameter[1] = arr[3];		//type
 					Console.WriteLine("   - add bean >> name: " + parameter[0]+", type: "+parameter[1] );
-					Console.WriteLine("");
-					//AddNode();
 					break;
 				case "DEL_BEAN":
 					com = "REMOVEb";
 					parameter = new string[1];
 					parameter[0] = arr[2];		//name
 					Console.WriteLine("   - remove bean>> name: " + parameter[0]);
-					Console.WriteLine("");
 					break;
 				case "NEW_LINK":
 					string[] link = arr[2].Split('-');
@@ -52,7 +50,6 @@ namespace SampleDevice
 						string operation2 = link.GetValue(4).ToString();
 						parameter[0] = linkfrom;parameter[1] = linkto;parameter[2] = operation1;parameter[3] = operation2;
 						Console.WriteLine("   - add simple link from " + linkfrom+" to "+linkto+" and operation1 is "+operation1+" and operation2 is "+operation2);
-						Console.WriteLine("");
 					}
 					else
 					{

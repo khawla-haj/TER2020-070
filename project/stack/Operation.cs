@@ -6,8 +6,12 @@ using System.Text;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using OpenSource.UPnP;
+using SampleDevice.Basic.ToString;
 using SampleDevice.BeanToFlow.BasicUI;
+using SampleDevice.BeanToFlow.UPnP;
 using SampleDevice.BeanToFlow.UPnPLight;
+using SampleDevice.InterfaceTranslator.SingleToDoubleString2;
+using SampleDevice.LinkToFlow;
 using SampleDevice.NodeRedAPI;
 
 namespace SampleDevice
@@ -27,29 +31,20 @@ namespace SampleDevice
 
 		public bool CheckAction()
 		{
+			if (this.res[0][0] == null)
+				return false;
 			if (this.res[0][0].Equals("ADDb"))
 				return this.AddFlow_ByBean(this.res[1][0], this.res[1][1]);
 			if (this.res[0][0].Equals("REMOVEb"))
 				return this.DelFlow_ByBean(this.res[1][0]);
 			if (this.res[0][0].Equals("ADDsimplel"))
-			{
-				//string[] par = this.res["ADDsimplel"];
 				return this.AddSimpleLink(this.res[1][0], this.res[1][1], this.res[1][2], this.res[1][3]);
-			}
 			if (this.res[0][0].Equals("ADDimconptablel"))
-			{
-				//string[] par = this.res["ADDImcomptablel"];
 				return this.AddImcomptableLink(this.res[1][0], this.res[1][1], this.res[1][2], this.res[1][3], this.res[1][4]);
-			}
 			if (this.res[0][0].Equals("DELsimplel"))
 				return this.DelSimpleLink(this.res[1][0], this.res[1][1], this.res[1][2], this.res[1][3]);
 			if (this.res[0][0].Equals("DELimconptablel"))
-			{
-				//string[] par = this.res["ADDImcomptablel"];
 				return this.DelImcomptableLink(this.res[1][0], this.res[1][1], this.res[1][2], this.res[1][3], this.res[1][4]);
-			}
-			if (this.res[0][0] == null)
-				return false;
 			return true;
 		}
 
@@ -59,15 +54,36 @@ namespace SampleDevice
 			switch (type)
 			{
 				case("System.Windows.Forms.TextBox"):
-					TextBox btf = new TextBox(name, this.api);
+					TextBox3 btf = new TextBox3(name, this.api);
 					break;
 				case ("WComp.UPnPDevice.Network_Light__LAPTOP_2OTJT3VN_"):
-					NetWorkLight netWorkLight = new NetWorkLight(name, this.api);
+					//NetWorkLight netWorkLight = new NetWorkLight(name, this.api);
+					UPnPFlow uPnPFlow = new UPnPFlow(name, "Network Light (LAPTOP-2OTJT3VN)",this.api);
+					break;
+				case ("WComp.UPnPDevice.Switch"):
+					//NetWorkLight netWorkLight = new NetWorkLight(name, this.api);
+					UPnPFlow uPnPFlow2 = new UPnPFlow(name, "Switch", this.api);
+					break;
+				case ("WComp.UPnPDevice.Plotter"):
+					UPnPFlow uPnPFlow3 = new UPnPFlow(name, "Plotter", this.api);
+					break;
+				case ("WComp.UPnPDevice.Light"):
+					UPnPFlow uPnPFlow4 = new UPnPFlow(name, "Light", this.api);
 					break;
 				case ("System.Windows.Forms.CheckBox"):
 					CheckBox checkBox = new CheckBox(name, this.api);
 					break;
-					
+				case ("System.Windows.Forms.Button"):
+					Button button = new Button(name, this.api);
+					break;
+				case ("WComp.BasicBeans.ToString"):
+					ToString ts = new ToString(name, api);
+					break;
+				case ("WComp.InterfaceTranslator.SingleToDoubleString2"):
+					SingleToDoubleString2 stds2 = new SingleToDoubleString2(name, api);
+					break;
+
+
 			}
 			return true;
 
@@ -97,6 +113,15 @@ namespace SampleDevice
 			return true;
 		}
 
+		public bool AddSimpleLink2(string from, string to, string operation1, string operation2) 
+		{
+			
+			SimpleLink simpleLink = new SimpleLink(from, to, operation1, operation2, this.api);
+			
+			
+
+			return true;
+		}
 		public bool AddSimpleLink(string from, string to, string operation1, string operation2)
 		{
 			Console.WriteLine("call nodered api: AddSimplelink");

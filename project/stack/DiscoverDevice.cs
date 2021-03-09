@@ -15,7 +15,7 @@ namespace SampleDevice
 {
 	class DiscoverDevice
 	{
-		private NodeRedAPI.NodeRedAPI api = new NodeRedAPI.NodeRedAPI();
+		public NodeRedAPI.NodeRedAPI api = new NodeRedAPI.NodeRedAPI();
 		private UPnPSmartControlPoint wcompControlPoint { get; set; }
 		private UPnPSmartControlPoint noderedControlPoint { get; set; }
 
@@ -49,7 +49,8 @@ namespace SampleDevice
 					Console.WriteLine("thread running");
 					CheckStateVariable csv = new CheckStateVariable();
 					Operation op = new Operation(api, csv.CheckValue(output[0].ToString()));
-					op.CheckAction();
+					if (output[0] != null)
+						op.CheckAction();
 					output.RemoveAt(0);
 				}
 			}

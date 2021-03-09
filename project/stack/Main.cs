@@ -8,6 +8,8 @@ using SampleDevice;
 using SampleDevice.NodeRedAPI;
 using System.Threading;
 using Newtonsoft.Json.Linq;
+using SampleDevice.BeanToFlow.UPnP;
+using System.Windows.Forms;
 
 namespace OpenSource.DeviceBuilder
 {
@@ -18,35 +20,27 @@ namespace OpenSource.DeviceBuilder
 	{
 		public static DiscoverDevice dd { get; private set; }
 		
-
+		public static UPnPFlow u { get; private set; }
 		/// <summary>
 		/// The main entry point for the application.
 		/// </summary>
 		[STAThread]
 		static void Main(string[] args)
 		{
-
+			//Application.Run(new Form1());
 
 			dd = new DiscoverDevice();
 			dd.StartScan();
-	
+
+
 			Thread thread2 = new Thread(new ThreadStart(dd.test));
 			thread2.Start();
 
 
-			
 
 
-			// Starting UPnP Device
-			//System.Console.WriteLine("UPnP .NET Framework Stack");
-			//System.Console.WriteLine("Device Builder Build#1.0.5329.22110");
-			//SampleDevice device = new SampleDevice();
 
-			//device.Start();
-			System.Console.WriteLine("Press return to stop device.");
-			System.Console.ReadLine();
-			//device.Stop();
-			
+
 		}
 		
 	}
